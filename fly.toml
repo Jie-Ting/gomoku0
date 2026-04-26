@@ -1,0 +1,18 @@
+# Fly.io app config
+# After `fly launch`, Fly may rewrite/extend this file.
+#
+# IMPORTANT: app name must be globally unique.
+# Either edit `app` below or run `fly launch` to set it interactively.
+
+app = "gomoku-online-yourname"
+primary_region = "nrt"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 1
